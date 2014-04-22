@@ -84,7 +84,8 @@ INCLUDE_MODULES = (
     "bgl",
     "blf",
     "mathutils",
-    "mathutils.geometry"
+    "mathutils.geometry",
+    "io_utils",
 )
 
 _BPY_STRUCT_FAKE = "bpy_struct"
@@ -1092,6 +1093,10 @@ def rna2predef(BASEPATH):
     if "aud" in INCLUDE_MODULES:
         import aud as module
         pymodule2predef(BASEPATH, "aud", module, "Audio System (aud)")
+	
+    if "io_utils" in INCLUDE_MODULES:
+        from bpy_extras import io_utils as module
+        pymodule2predef(BASEPATH, "io_utils", module, "Utils (io_utils)")
         
     del module
 
