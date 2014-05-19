@@ -86,6 +86,7 @@ INCLUDE_MODULES = (
     "mathutils",
     "mathutils.geometry",
     "io_utils",
+	"bmesh"
 )
 
 _BPY_STRUCT_FAKE = "bpy_struct"
